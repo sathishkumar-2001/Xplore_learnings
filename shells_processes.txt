@@ -1,0 +1,61 @@
+shell history tricks :
+  !! for saving to history
+  ctrl + r -> searching 
+  export HISTCONTROL=ignoredups -> removes repeated commands in history
+  export HISTTIMEFORMAT="%h %d %H:%M:%S> "
+  export HISTSIZE=100000
+  every command should be added in the bash profile to save as login again
+  What command brings back the entire previous line? - !!
+  
+pattern matching :
+   * matches many characters ex - file*.txt output - file23.txt , file1.txt , filess.txt
+   ? matches one of any character - file?.txt output - filea.txt , file1.txt
+   [] matches one character in list - file[0-9].txt output - file1.txt , file2.txt
+   ls file[[:digit:]].txt
+   ls file[[:punct:]].txt
+ 
+Escape characters and quotes
+   echo $USER
+   echo "My name $USER" - My name sk
+   echo 'My name $USER' - My name $USER
+   
+Command & var substitution
+   pdir="/home/sathish/new"
+   mkdir -p $pdir -> will create the dir for var pdir
+   fname="report"
+   touch $pdir/$fname
+   touch $pdir/${fname}_january
+   
+Named pipe - fifo
+UNnamed pipe 
+
+File redirects and tees
+    ls > /home/ls.txt  -> to overwrite
+	ls >> /home/ls.txt -> to append
+	ls 2> /home/lsout.err -> stderr
+	ls 2>> /home/lsout.err -> stderr append
+	ls &> /home/ls.txt -> Redirect both to a file
+	sort < /home/lsout.txt > /home/sorted.txt -> redirect in and out of command
+	ls | tee lsout.txt -> send output to both file and terminal
+	ls | tee -a lsout.txt -> append
+	
+Linux processes
+    ps -> list the current running process PID
+	ps -e -> gives all process
+	ps -ef
+	ps -elF
+	top -> realtime
+    
+	pidof crond
+	kill -l -> lists kill signals
+	kill (pid)
+	sudo systemctl start crond -> to start the process again 
+	
+	process priority
+	  nice -2 top -> setting priority to process
+	  renice 5 (pid) -> to reassign new priority to the process
+	  
+	managing process 
+	   watch ps -C dd --format pid,cmd,%cpu
+	   dd if=/dev/zero of=/dev/null
+	    
