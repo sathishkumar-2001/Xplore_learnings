@@ -54,8 +54,29 @@ Linux processes
 	process priority
 	  nice -2 top -> setting priority to process
 	  renice 5 (pid) -> to reassign new priority to the process
+	  In Unix-like systems, process priority is determined by the niceness value. Lower nice values correspond to higher priority, with -20 being the highest priority and 19 being the lowest. Therefore, -19 is the highest priority in the provided options.
 	  
 	managing process 
 	   watch ps -C dd --format pid,cmd,%cpu
 	   dd if=/dev/zero of=/dev/null
 	    
+job scheduling 
+    one time jobs using at and batch
+	
+	cron jobs
+	   ex - 45 23 * * 6 /home/grant/bin/backup.sh 
+	   sudo yum install -y cronie crontabs
+	   sudo systemctl start crond
+	   sudo systemctl enable crond
+	   crontab -e -> to create cron jobs
+	   sudo vi /etc/security/access.conf -> for setting access to cron files
+	   
+System services
+    daemon = system service
+	systemctl list-unit-files -at service
+	systemctl stop atd -> to stop a service
+	systemctl start atd -> to start a service
+	sudo systemctl restart atd
+	systemctl is-active atd
+	To restrict the cron service from running either automatically or manually, type  systemctl mask crond
+	 
