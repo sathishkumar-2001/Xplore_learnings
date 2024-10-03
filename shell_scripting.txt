@@ -103,10 +103,4 @@ Interactive scripts
      getting input from users
 	     read -p "what is your name" name
 		 
-		 echo "$name"
-		 
-		 
-	
-	
-	    
-		
+		 echo "$name"	
