@@ -1,0 +1,112 @@
+Shell Scripting 
+   comments - using #
+   The shebang 
+       #!/usr/bin/env bash
+	   #!/bin/bash
+	   #!/usr/bin/env python
+	   #!/usr/bin/env node
+	creating variables 
+       name=sk
+       echo $name
+       name="sath kum"
+	passing parameters 
+	    ./text.sh new
+		inside text.sh -> echo hello $1
+		now it will print hello new
+		echo $(date)
+		echo $(pwd)
+		echo $?
+Branching & loops
+    if then fi
+	   if [$color = "blue"]
+	   then
+	       echo "The color is blue"
+	   fi
+	Boolean compares 
+	   -eq -> if equal
+	   -ne -> not equal
+	   -lt -> less than
+	   -gt -> greater than
+	   -le -> less than or equal 
+	   -ge -> greater than or equal
+	else clause
+	elif clause
+	    elif [$color = "orange"]
+		then 
+		    echo "The color is orange"
+			
+	While loop
+	    count=0
+		
+		while [$count -lt 10]
+		do
+		  echo "count = $count"
+		  ((count++))
+		done
+		
+	for loop
+	    Names=$@ -> when u are having array of inputs like ./input.sh jay sk master
+		
+		for name in $Names
+		do
+		  echo "hello $name
+		done
+		
+	using break and continue
+	
+Reading environment variables
+     echo "$PATH"
+	 echo "$TERM"
+	 echo "$EDITOR"
+	 -z means returns empty string
+	 
+	 if [ -z $EDITOR ]
+	 then  
+	     echo "The editor var is not set"
+	 fi
+	 
+	we can also change the values of environment variables
+	
+	
+Functions
+    creating functions
+	    function Hello() {
+		    echo "hello"
+		}
+		
+		Hello() {
+		    echo "hello"
+		}
+		
+		call the functions like -> Hello
+	
+	piping
+	    FILES='ls -l | sort -r | head -3'
+	
+File operations
+    reading files
+	    while IFS='' read -r LINE
+		do 
+		  echo "LINE $COUNT: $LINeE
+		  ((COUNT++))
+		done < '$1'
+		
+	checksums
+	    cksum file.txt
+		
+
+sleep & process
+    using sleep command
+	    sleep 5
+		
+Interactive scripts
+     getting input from users
+	     read -p "what is your name" name
+		 
+		 echo "$name"
+		 
+		 
+	
+	
+	    
+		
