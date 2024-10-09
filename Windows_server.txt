@@ -1,0 +1,27 @@
+Windows server 
+
+Windows Server is a group of operating systems developed by Microsoft, designed specifically for use on servers. It is used to manage and run network infrastructure, applications, and services in enterprise-level environments. Windows Server provides a range of services and tools for network management, virtualization, file storage, security, and application hosting.
+
+Key features of Windows Server include:
+
+Active Directory (AD): A directory service for managing user accounts, computers, and other resources within a network.
+
+Hyper-V: A virtualization platform that allows the creation and management of virtual machines (VMs).
+
+Internet Information Services (IIS): A web server for hosting websites and web applications.
+
+File and Storage Services: Tools for managing network file storage and sharing.
+
+Failover Clustering: Provides high availability for applications and services by grouping multiple servers.
+
+Windows Admin Center: A management tool for configuring and monitoring servers.
+
+Remote Desktop Services (RDS): Allows users to remotely access applications and desktops hosted on a Windows Server.
+
+Security Features: Built-in firewall, encryption, and role-based access control (RBAC).
+
+Windows Server versions include Windows Server 2016, 2019, and 2022, with various editions designed for different sizes of organizations and types of workloads.
+
+
+
+Windows server 2012 
