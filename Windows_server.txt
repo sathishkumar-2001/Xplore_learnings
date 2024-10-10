@@ -24,4 +24,23 @@ Windows Server versions include Windows Server 2016, 2019, and 2022, with variou
 
 
 
-Windows server 2012 
+Windows server 2012
+server 2012 editions
+      server 2012 Datacenter - high end applications
+	  server 2012 standard edition - supports only two concurrent virtual machines
+	  server 2012 Essentials edition - does not supports server core , not support hyper-v , no active directory , max 25 users only
+	  server 2012 Foundations edition - for small business , no virtualization support , max fifteen only
+	  
+hardware requirement 
+        minimum of 1.4GHz processor 512mb RAM , 32GB disk , 
+		max unlimited hard disk , 4TB RAM , 64 clusters of servers 
+		
+upgrade or migrate
+        migrate from 2008 to 2012
+		need to use powershell cmdlet for migrate
+		
+server roles
+       we need install roles like active directory , dns server , ...
+
+
+ 
