@@ -42,5 +42,20 @@ upgrade or migrate
 server roles
        we need install roles like active directory , dns server , ...
 
-
- 
+server storage
+       partitioning 
+	       Master Boot Record(MBR)
+		   Global Unique Identifier partitioning Table (GPT)
+		Dynamic Disk Volume Types
+		    Simple volume
+			spanned volume
+			Striped volume (RAID-0)
+			Mirrored volume (RAID-1)
+			RAID-5 volume -> dynamic disk volume type requires at least three hard drives to be created
+			
+		file systems support by 2012
+		    FAT 16 FAT 32 exFAT NTFS ReFS(Resilient File systems)
+			
+CLI 
+    using windows powershell
+	   help 
