@@ -59,3 +59,7 @@ server storage
 CLI 
     using windows powershell
 	   help 
+
+
+	   
+Install , configure , Admin active directory
